@@ -61,13 +61,17 @@ body {
 }
 
 .colors li:nth-child(1){
-    background-color: red;
+    background-color: black;
 }
 
 .colors li:nth-child(2){
-    background-color: green;
+    background-color: red;
 }
 
 .colors li:nth-child(3){
+    background-color: green;
+}
+
+.colors li:nth-child(4){
     background-color: blue;
 }

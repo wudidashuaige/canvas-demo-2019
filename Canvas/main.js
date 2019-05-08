@@ -22,12 +22,23 @@ eraser.onclick = function(){
     pen.classList.remove('active')//消掉铅笔的类
 }
 
+black.onclick = function(){
+    context.fillStyle = 'black'
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+    red.classList.remove('active')
+
+}
+
 red.onclick = function(){
     context.fillStyle = 'red'
     context.strokeStyle = 'red'
     red.classList.add('active')
     green.classList.remove('active')
     blue.classList.remove('active')
+    black.classList.remove('active')
 }
 
 green.onclick = function(){
@@ -36,6 +47,7 @@ green.onclick = function(){
     green.classList.add('active')
     red.classList.remove('active')
     blue.classList.remove('active')
+    black.classList.remove('active')
     
 }
 
@@ -45,6 +57,7 @@ blue.onclick = function(){
     blue.classList.add('active')
     red.classList.remove('active')
     green.classList.remove('active')
+    black.classList.remove('active')
 }
 
 function autoSetCanvas(canvas) {
