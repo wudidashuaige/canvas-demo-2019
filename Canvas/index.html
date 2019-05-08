@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./index.css">
-     
     <title>Canvas</title>
+    <script src="//at.alicdn.com/t/font_1180634_murgvc1rd4.js"></script>
 </head>
 
 <body>
-    
+
     <canvas id="xxx" height=300 width=300>
 
     </canvas>
     <div class="actions" id=actions>
-        <button id=eraser>橡皮擦</button>
-        <button id=brush>画笔</button>
+        <svg class="icon active" aria-hidden="true" id=pen>
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+
+        <svg class="icon" aria-hidden="true" id=eraser>
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+
+
+
     </div>
+
+    <ol class="colors">
+        <li class="red active" id="red"></li>
+        <li class="green" id="green"></li>
+        <li class="blue" id="blue"></li>
+    </ol>
 
 </body>
 <script src="./main.js"></script>

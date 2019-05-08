@@ -9,13 +9,42 @@ listenToUser(yyy)
 /******************/
 
 var eraserEnabled = false
-eraser.onclick = function () {
-    eraserEnabled = !eraserEnabled
-    actions.className = 'actions x'
+
+pen.onclick = function(){
+    eraserEnabled = false
+    pen.classList.add('active')
+    eraser.classList.remove('active') //消掉橡皮擦的类
 }
-brush.onclick = function () {
-    eraserEnabled
-    actions.className = 'actions'
+
+eraser.onclick = function(){
+    eraserEnabled = true 
+    eraser.classList.add('active')
+    pen.classList.remove('active')//消掉铅笔的类
+}
+
+red.onclick = function(){
+    context.fillStyle = 'red'
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+
+green.onclick = function(){
+    context.fillStyle = 'green'
+    context.strokeStyle = 'green'
+    green.classList.add('active')
+    red.classList.remove('active')
+    blue.classList.remove('active')
+    
+}
+
+blue.onclick = function(){
+    context.fillStyle = 'blue'
+    context.strokeStyle = 'blue'
+    blue.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
 }
 
 function autoSetCanvas(canvas) {
@@ -39,7 +68,6 @@ function drawLine(x1, y1, x2, y2) {
     context.moveTo(x1, y1) //起点
     context.lineTo(x2, y2) //终点
     context.lineWidth = 5
-    context.strokeStyle = 'black'
     context.stroke()
     context.closePath()
 }
@@ -47,7 +75,6 @@ function drawLine(x1, y1, x2, y2) {
 function drawCircle(x, y, radius) {
     context.beginPath()
     context.arc(x, y, radius, 0, Math.PI * 2);
-    context.fillStyle = 'black'
     context.fill()
 }
 
