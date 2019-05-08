@@ -74,4 +74,25 @@ body {
 
 .colors li:nth-child(4){
     background-color: blue;
+
+}
+.sizes {
+    position: fixed;
+    right: 30px
+    ;
+    top: 20px;
+    
+}
+
+.sizes .thin {
+    height: 0;
+    width: 20px;
+    border-top: 3px solid black;
+    margin-bottom: 20px;
+}
+
+.sizes .thick {
+    height: 0;
+    width: 20px;
+    border-top: 6px solid black;
 }

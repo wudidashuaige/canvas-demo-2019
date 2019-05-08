@@ -1,5 +1,6 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
+var lineWidth = 5
 
 autoSetCanvas(yyy)
 
@@ -60,6 +61,29 @@ blue.onclick = function(){
     black.classList.remove('active')
 }
 
+thin.onclick = function (){
+    lineWidth = 5
+}
+
+thick.onclick = function (){
+    lineWidth = 10
+}
+
+clear.onclick = function(){
+    context.clearRect(0, 0, yyy.width, yyy.height);
+}
+
+save.onclick = function(){
+    var url = yyy.toDataURL('image/png')
+    console.log(url)
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = '我的画'
+    a.target = '_blank'
+    a.click()
+}
+
 function autoSetCanvas(canvas) {
     setCanvasSize()
 
@@ -80,7 +104,7 @@ function drawLine(x1, y1, x2, y2) {
     context.beginPath()
     context.moveTo(x1, y1) //起点
     context.lineTo(x2, y2) //终点
-    context.lineWidth = 5
+    context.lineWidth = lineWidth
     context.stroke()
     context.closePath()
 }
