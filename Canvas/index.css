@@ -1,4 +1,4 @@
-ul,ol {
+ul, ol {
     list-style: none;
 }
 
@@ -8,7 +8,8 @@ ul,ol {
 }
 
 .icon {
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
@@ -16,6 +17,9 @@ ul,ol {
 
 #xxx {
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 body {
@@ -57,31 +61,29 @@ body {
 }
 
 .colors li.active {
- box-shadow: 0 0 6px rgba(0, 0, 0, 1)
+    box-shadow: 0 0 6px rgba(0, 0, 0, 1)
 }
 
-.colors li:nth-child(1){
+.colors li:nth-child(1) {
     background-color: black;
 }
 
-.colors li:nth-child(2){
+.colors li:nth-child(2) {
     background-color: red;
 }
 
-.colors li:nth-child(3){
+.colors li:nth-child(3) {
     background-color: green;
 }
 
-.colors li:nth-child(4){
+.colors li:nth-child(4) {
     background-color: blue;
-
 }
+
 .sizes {
     position: fixed;
-    right: 30px
-    ;
+    right: 30px;
     top: 20px;
-    
 }
 
 .sizes .thin {

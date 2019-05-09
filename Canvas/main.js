@@ -1,3 +1,4 @@
+
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
 var lineWidth = 5
@@ -11,19 +12,19 @@ listenToUser(yyy)
 
 var eraserEnabled = false
 
-pen.onclick = function(){
+pen.onclick = function () {
     eraserEnabled = false
     pen.classList.add('active')
     eraser.classList.remove('active') //消掉橡皮擦的类
 }
 
-eraser.onclick = function(){
-    eraserEnabled = true 
+eraser.onclick = function () {
+    eraserEnabled = true
     eraser.classList.add('active')
     pen.classList.remove('active')//消掉铅笔的类
 }
 
-black.onclick = function(){
+black.onclick = function () {
     context.fillStyle = 'black'
     context.strokeStyle = 'black'
     black.classList.add('active')
@@ -33,7 +34,7 @@ black.onclick = function(){
 
 }
 
-red.onclick = function(){
+red.onclick = function () {
     context.fillStyle = 'red'
     context.strokeStyle = 'red'
     red.classList.add('active')
@@ -42,17 +43,17 @@ red.onclick = function(){
     black.classList.remove('active')
 }
 
-green.onclick = function(){
+green.onclick = function () {
     context.fillStyle = 'green'
     context.strokeStyle = 'green'
     green.classList.add('active')
     red.classList.remove('active')
     blue.classList.remove('active')
     black.classList.remove('active')
-    
+
 }
 
-blue.onclick = function(){
+blue.onclick = function () {
     context.fillStyle = 'blue'
     context.strokeStyle = 'blue'
     blue.classList.add('active')
@@ -61,19 +62,19 @@ blue.onclick = function(){
     black.classList.remove('active')
 }
 
-thin.onclick = function (){
+thin.onclick = function () {
     lineWidth = 5
 }
 
-thick.onclick = function (){
+thick.onclick = function () {
     lineWidth = 10
 }
 
-clear.onclick = function(){
+clear.onclick = function () {
     context.clearRect(0, 0, yyy.width, yyy.height);
 }
 
-save.onclick = function(){
+save.onclick = function () {
     var url = yyy.toDataURL('image/png')
     console.log(url)
     var a = document.createElement('a')
